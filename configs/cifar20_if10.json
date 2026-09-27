@@ -1,0 +1,26 @@
+{
+  "dataset": "cifar20",
+  "imbalance_factor": 10,
+  "seed": 4801,
+  "byol": {
+    "epochs": 800,
+    "batch_size": 256
+  },
+  "relation": {
+    "total_epochs": 800,
+    "shared_warmup_epochs": 200,
+    "relation_start_epoch": 200,
+    "relation_ramp_epochs": 100,
+    "relation_beta_max": 0.05,
+    "relation_temperature": 0.4,
+    "relation_refresh_epochs": 25
+  },
+  "geometry": {
+    "pca_dim": 384,
+    "epsilon": 0.12,
+    "gps_n_init": 12,
+    "gps_max_iter": 100,
+    "sinkhorn_max_iterations": 2000,
+    "sinkhorn_tolerance": 1e-06
+  }
+}
