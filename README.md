@@ -1,6 +1,6 @@
 # PACI
 
-Geometry-matched relational learning for imbalanced image clustering.
+Geometry-matched relational learning for imbalanced clustering.
 
 ## Installation
 
