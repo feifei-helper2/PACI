@@ -1,4 +1,4 @@
-"""The primary evaluator: spherical K-means on target-projector features."""
+"""Spherical K-means evaluation on target-projector features."""
 from pathlib import Path
 import numpy as np
 from .transport import row_l2_t, to_tensor, gpu_spherical_kmeans
