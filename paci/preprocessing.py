@@ -3,7 +3,7 @@ import numpy as np
 import torch
 
 def gpu_pca_reduce(x: np.ndarray, dim: int, seed: int, max_dim: int | None = None) -> np.ndarray:
-    """Randomized GPU PCA via torch.pca_lowrank, then L2-normalize."""
+    """Center features, apply randomized PCA and L2-normalize each row."""
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     xt = torch.from_numpy(np.asarray(x, dtype=np.float32)).to(device)
     xt = xt - xt.mean(dim=0, keepdim=True)
