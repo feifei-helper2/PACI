@@ -23,7 +23,7 @@ class IndexedSubset(Dataset):
         return self.base[int(self.indices[i])]
 
 class CIFAR20Coarse(Dataset):
-    """CIFAR-100 train images with official 20 coarse labels."""
+    """CIFAR-100 images with the 20 official coarse labels."""
     def __init__(self, root: str, train: bool = True, download: bool = True, transform=None):
         self.base = CIFAR100(root=root, train=train, download=download, transform=None)
         self.transform = transform
